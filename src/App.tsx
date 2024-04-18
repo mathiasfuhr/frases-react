@@ -49,7 +49,9 @@ function App() {
     let numeroAleatorio = Math.floor(
       Math.random() * allFrases[categoriaSelecionada].frases.length
     );
-    setTextoFrase(allFrases[categoriaSelecionada].frases[numeroAleatorio]);
+    setTextoFrase(
+      `"${allFrases[categoriaSelecionada].frases[numeroAleatorio]}"`
+    );
   }
 
   return (
@@ -78,7 +80,7 @@ function App() {
         Gerar Frase
       </button>
 
-      {textoFrase !== "" && <p className="textoFrase">" {textoFrase} "</p>}
+      {textoFrase !== "" && <p className="textoFrase">{textoFrase}</p>}
     </div>
   );
 }
